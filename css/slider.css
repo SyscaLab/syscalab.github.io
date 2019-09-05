@@ -1,0 +1,109 @@
+.slider-bg{
+	background:url(../images/slider-tail.gif) center top repeat;
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+.slider-border-top{
+	background:url(../images/slider-border-top.png) center top repeat-x;
+	width:100%;
+	height:7px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:99;
+}
+.slider-border-bot{
+	background:url(../images/slider-border-bot.png) center top repeat-x;
+	width:100%;
+	height:7px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	z-index:99;
+}
+#slides{
+	width: 1240px;
+	left:50%;
+	margin-left:-620px;
+	position:relative;
+	overflow:hidden;
+}
+.slides_container{
+	width:1240px;
+	height:521px;
+	overflow:hidden;
+}
+.slide{width:1240px; height:auto;}
+
+/* Control Nav */
+.prev, .next{
+	position:absolute;
+	bottom:61px;
+	display:block;
+	width:44px;
+	height:87px;
+	text-indent:-100%;
+	font-size:0;
+	line-height:0;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	z-index:100;
+}
+.prev{background-image:url(../images/prev.png); right:194px;}
+.next{background-image:url(../images/next.png); right:150px;}
+	.prev:hover, .next:hover{background-position:0 -96px;}
+/* Caption */
+.caption{
+	z-index:999;
+	position:absolute;
+	top:0;
+	left:0;
+	width:745px;
+	padding:43px 0 0 150px;
+	overflow:hidden;
+}
+	.caption .row-1 {
+		color: #07A2CA;
+		font-size: 73px;
+		line-height: 89px;
+	}
+	.caption .row-2{
+		color: #1D1A33;
+		font-size: 99px;
+		line-height: 120px;
+		margin-top: -27px;
+	}
+	.caption .row-3{
+		color: #07A2CA;
+		font-size: 179px;
+		line-height: 220px;
+		margin-left: -4px;
+		margin-top: -51px;
+	}
+		.caption .row-3 em{color: #1D1A33;}
+
+@media only screen and (max-width: 995px){
+	#slides{width: 768px; left:0; margin:0 auto;}
+	.slides_container{width:768px; height:323px;}
+	.slide{width:768px;}
+	.prev{bottom:30px; right:64px;}
+	.next{bottom:30px; right:20px;}
+	.caption{padding:30px 0 0 20px;}
+	.caption .row-1 {font-size: 50px; line-height: 60px;}
+	.caption .row-2{font-size: 75px; line-height: 90px; margin-top: -23px;}
+	.caption .row-3{font-size: 120px; line-height: 144px; margin-top: -38px;}
+}
+@media only screen and (max-width: 767px){
+	#slides, .slides_container{width:460px; height:193px;}
+	.slide{width:460px;}
+	.prev{bottom:50px; right:auto; left:30px;}
+	.next{bottom:50px; right:auto; left:74px;}
+	.caption{display:none !important;}
+}
+@media only screen and (max-width: 479px){
+	#slides, .slides_container{width:320px; height:134px;}
+	.slide{width:320px;}
+	.prev{bottom:25px; left:10px;}
+	.next{bottom:25px; left:54px;}
+}

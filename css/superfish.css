@@ -1,0 +1,99 @@
+nav{
+	position: relative;
+	float:right;
+	padding-right:10px;
+	padding-top:11px;
+}
+#menu-icon{
+	display:none;
+	width:57px;
+	height:43px;
+	font-size:20px;
+	line-height:24px;
+	color:#fff;
+	text-align:center;
+	padding-top:13px;
+	background:url(../images/menu-icon.png) center top no-repeat;
+	cursor:pointer;
+}
+	#menu-icon span{
+		display:block;
+		width:100%;
+		height:6px;
+		background:url(../images/menu-icon-marker.gif) center top no-repeat;
+	}
+.menu {list-style:none;}
+.menu > li {
+	position:relative;
+	float:left;
+	font-size:20px;
+	line-height:24px;
+	margin-right:31px;
+}
+	.menu > li > a {
+		color:#dfdfb9;
+		text-decoration:none;
+	}
+		.menu > li.sfHover > a,.menu > li > a:hover , .menu > li.current > a {text-decoration:none; color:#07a2ca;}
+	.menu .menu-arrow{display:none;}
+/***submenu***/
+.menu ul {
+	position:absolute;
+	top:-999em;
+	width:112px; 
+	display:none;
+	padding:12px 15px 14px;
+	background:url(../images/submenu-tail.png) 0 0 repeat;
+	z-index:999;
+}
+.menu li li{
+	width:100%;
+	padding:0;
+	margin-bottom:16px;
+	position:relative;
+}
+	.menu li li a{
+		color:#dfdfb9;
+		text-decoration:none;
+	}
+		.menu li li > a:hover,.menu li li.sfHover > a{
+			color:#07a2ca;
+			text-decoration:none;
+		}
+.menu li:hover ul, .menu li.sfHover ul {left:-15px; top:33px;}
+.menu li:hover li ul, .menu li.sfHover li ul {top:-999em;}
+/***subsubmenu***/
+.menu ul ul{width:123px;}
+.menu li li:hover ul, .menu li li.sfHover ul {left:127px; top:-12px;}
+.menu li li:hover li ul, .menu li li.sfHover li ul {top:-999em;}
+
+@media only screen and (max-width: 995px){
+	.menu > li > a .menu-arrow{display:inline-block; width:9px; height:6px; overflow:hidden; text-indent:-999em; font-size:0; line-height:0; background:url(../images/menu-arrow.png) center top no-repeat; vertical-align:middle; margin-left:2px;}
+		.menu > li.sfHover > a .menu-arrow, .menu > li > a:hover .menu-arrow, .menu > li.current > a .menu-arrow{background-position: center -25px;}
+	.menu ul{width:123px;}
+	.menu ul a .menu-arrow{display:inline-block; width:6px; height:9px; overflow:hidden; text-indent:-999em; font-size:0; line-height:0; background:url(../images/menu-arrow2.png) center top no-repeat; vertical-align:middle; margin-left:2px;}
+		.menu ul li.sfHover > a .menu-arrow, .menu ul a:hover .menu-arrow{background-position: center -22px;}
+	.menu li li:hover ul, .menu li li.sfHover ul {left:138px;}
+}
+
+@media only screen and (max-width: 767px) {
+	nav{padding-right:0; padding-top:0;}
+	#menu-icon{display:block;}
+	/*menu*/
+	.menu{display:none; position:absolute; top:75px; right:0; width:95px; padding:12px 15px 14px; background:url(../images/submenu-tail.png) 0 0 repeat; z-index:999;}
+	.menu > li {float:none; width:100%; padding:0; margin-bottom:16px;}
+	.menu > li > a .menu-arrow{width:6px; height:9px; background-image:url(../images/menu-arrow2.png);}
+		.menu > li.sfHover > a .menu-arrow, .menu > li > a:hover .menu-arrow, .menu > li.current > a .menu-arrow{background-position: center -22px;}
+	/***submenu***/
+	.menu ul {right:110px; left:auto !important; top:0 !important;}
+	.menu ul a .menu-arrow{display:none;}
+		.menu ul li.sfHover > a{color:#dfdfb9;}
+		.menu ul li a:hover{color:#07a2ca;}
+	/***submenu***/
+	.menu ul ul {position:static; width:auto; padding:15px 0 0 10px; display:block !important; background:none;}
+		.menu ul ul li{font-size:16px; line-height:20px;}
+			.menu ul ul a{display:inline-block; padding-left:10px; background:url(../images/menu-arrow2.png) 0 6px no-repeat;}
+				.menu ul ul a:hover{background-position: 0 -16px;}
+}
+
+@media only screen and (min-width: 768px) {.menu {display:block !important;}}

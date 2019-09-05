@@ -1,0 +1,4 @@
+.img-box,
+#contact-form label{behavior: url(js/PIE.htc); position:relative;}
+
+body{min-width:960px;}
